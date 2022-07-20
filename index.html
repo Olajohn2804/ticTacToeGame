@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        h3{
+            text-align: center;
+            font-size: xx-large;
+            color: white;
+        }
+        table{
+            border: none;
+        }
+        tr{
+            border: none;
+        }
+        td{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: xx-large;
+            color: white;
+            border-radius: 15px;
+            box-shadow: 1px 2px 4px 0px rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+        #inpValue{
+         text-align: center;
+        }
+        input{
+            padding: 10px;
+            width: 15%;
+            border: white 2px dashed;
+            border-radius: 20px;
+            background-color: black;
+            color: orange;
+            text-align: center;
+            font-size: medium;
+        }
+        input:hover{
+            background-color: white;
+            color: orange;
+            transition: 1s;
+            border: black 2px dashed;
+        }
+        #btnStart{
+            padding: 10px;
+            width: 10%;
+            margin-top: 5px;
+            color: white;
+            font-size: medium;
+            background-color: green;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        #btnStart:hover{
+            color: green;
+            background-color: white;
+            border: 2px dashed green;
+            transition: 2s;
+            cursor: pointer;
+
+        }
+        #disp1{
+            color: white;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+        }
+        #disp2{
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+            font-size: large;
+            text-align: center;
+        }
+        .score{
+            color: white;
+            display: flex;
+            margin-top: 20px;
+            background-color: transparent;
+            color: white;
+            font-size: xx-large;
+            padding: 10px;
+            width: 19%;
+            margin-left: 40%;
+            box-shadow: 1px 2px 4px 0px rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            justify-content: center;
+        }
+        #result{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            font-size: xx-large;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+        }
+        #replayBtn{
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            width: 10%;
+            color: white;
+            cursor: pointer;
+            font-size: medium;  
+            background-color: green;
+            border-radius: 20px;
+        }
+        #footer{
+            text-align: center;
+        }
+        @media screen and (max-width:540px) {
+        #inpValue{
+         text-align: center;
+         justify-content: center;
+         display: block;
+        }
+        input{
+            padding: 10px;
+            width: 50%;
+            border: white 2px dashed;
+            border-radius: 20px;
+            background-color: black;
+            color: orange;
+            text-align: center;
+            font-size: medium;
+            margin-top: 5px;
+        }
+        #btnStart{
+            margin-left: 85px;
+            display: block;
+            padding: 10px;
+            width: 50%;
+            color: white;
+            font-size: medium;
+            background-color: green;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        #btnStart:hover{
+            color: green;
+            background-color: white;
+            border: 2px dashed green;
+            transition: 2s;
+            cursor: pointer;
+
+        }
+            #replayBtn{
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            width: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: medium;  
+            background-color: green;
+            border-radius: 20px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h3>TIK-TAC-TOE GAME</h3>
+    <div id="inpValue">
+        <input type="text" id="player1" placeholder="Player1">
+        <input type="text" id="player2" placeholder="Player2">
+        <div id="btn">
+            <button onclick="gameStart()" id="btnStart">Start</button>
+        </div>
+    </div>
+    <div>
+        <h2 id="disp1"></h2>
+        <h4 id="disp2"></h4>
+    </div>
+    <table align="center" border="1" height="300px" width="300px">
+        <tr>
+            <td onclick="test(event)" id="one1"></td>
+            <td onclick="test(event)" id="one2"></td>
+            <td onclick="test(event)" id="one3"></td>
+        </tr>
+        <tr>
+            <td onclick="test(event)" id="two1"></td>
+            <td onclick="test(event)" id="two2"></td>
+            <td onclick="test(event)" id="two3"></td>
+        </tr>
+        <tr>
+            <td onclick="test(event)" id="three1"></td>
+            <td onclick="test(event)" id="three2"></td>
+            <td onclick="test(event)" id="three3"></td>
+        </tr>
+    </table>
+    <footer id="footer">
+        <div>
+            <div id="result">
+            
+            </div>
+        </div>
+        <div class="score">
+            <div id="score1">0</div>
+            <div>-</div>
+            <div id="score2">0</div>
+        </div>
+        <button id="replayBtn" onclick="replay()">Replay</button>
+    </footer>
+    <script src="tic.js"></script>
+</body>
+</html>
